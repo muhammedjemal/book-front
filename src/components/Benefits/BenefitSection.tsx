@@ -1,0 +1,365 @@
+// "use client";
+// import Image from "next/image";
+// import clsx from "clsx";
+// import { motion, Variants } from "framer-motion";
+
+// import BenefitBullet from "./BenefitBullet";
+// import SectionTitle from "../SectionTitle";
+// import { IBenefit } from "@/types";
+// import Link from "next/link";
+
+// interface Props {
+//   benefit: IBenefit;
+//   imageAtRight?: boolean;
+// }
+
+// const containerVariants: Variants = {
+//   offscreen: {
+//     opacity: 0,
+//     y: 100,
+//   },
+//   onscreen: {
+//     opacity: 1,
+//     y: 0,
+//     transition: {
+//       type: "spring",
+//       bounce: 0.2,
+//       duration: 0.9,
+//       delayChildren: 0.2,
+//       staggerChildren: 0.1,
+//     },
+//   },
+// };
+
+// export const childVariants = {
+//   offscreen: {
+//     opacity: 0,
+//     x: -50,
+//   },
+//   onscreen: {
+//     opacity: 1,
+//     x: 0,
+//     transition: {
+//       type: "spring",
+//       bounce: 0.2,
+//       duration: 1,
+//     },
+//   },
+// };
+
+// const BenefitSection: React.FC<Props> = ({ benefit, imageAtRight }: Props) => {
+//   const { title, description, imageSrc, bullets } = benefit;
+
+//   return (
+//     <section className="benefit-section mt-20">
+//       <motion.div
+//         className="flex flex-wrap flex-col items-center justify-center gap-2 lg:flex-row lg:gap-20 lg:flex-nowrap mb-24"
+//         variants={containerVariants}
+//         initial="offscreen"
+//         whileInView="onscreen"
+//         viewport={{ once: true }}
+//       >
+//         <div
+//           className={clsx("flex flex-wrap items-center w-full max-w-lg", {
+//             "justify-start": imageAtRight,
+//             "lg:order-1 justify-end": !imageAtRight,
+//           })}
+//         >
+//           <div className="w-full  text-center lg:text-left ">
+//             <motion.div
+//               className="flex flex-col w-full"
+//               variants={childVariants}
+//             >
+//               <SectionTitle>
+//                 <h3 className="lg:max-w-2xl">{title}</h3>
+//               </SectionTitle>
+
+//               <p className="mt-1.5 mx-auto lg:ml-0 leading-normal text-foreground-accent">
+//                 {description}
+//               </p>
+//             </motion.div>
+
+//             <div className="mx-auto lg:ml-0 w-full">
+//               {bullets.map((item, index) => (
+//                 <BenefitBullet
+//                   key={index}
+//                   title={item.title}
+//                   icon={item.icon}
+//                   description={item.description}
+//                 />
+//               ))}
+//             </div>
+//           </div>
+//         </div>
+
+//         {/* <div className={clsx("mt-5 lg:mt-0", { "lg:order-2": imageAtRight })}>
+//           <div
+//             className={clsx("w-fit flex", {
+//               "justify-start": imageAtRight,
+//               "justify-end": !imageAtRight,
+//             })}
+//           >
+//             <Image
+//               src={imageSrc}
+//               alt="title"
+//               width="384"
+//               height="762"
+//               quality={100}
+//               className="lg:ml-0"
+//             />
+//           </div>
+//           oloch
+//         </div> */}
+//         <div className={clsx("mt-5 lg:mt-0", { "lg:order-2": imageAtRight })}>
+//           <div className="flex justify-center">
+//             <div
+//               className={clsx("w-fit", {
+//                 "mr-0": imageAtRight,
+//               })}
+//             >
+//               <Image
+//                 src={imageSrc}
+//                 alt="title"
+//                 width="384"
+//                 height="762"
+//                 quality={100}
+//                 className="lg:ml-0"
+//               />
+//             </div>
+//           </div>
+//           {/* Start of Title and Description additions */}
+//           <div className="mt-4 flex justify-center">
+//             <div className="w-[384px] text-left">
+//               <h2 className="text-2xl font-semibold text-gray-800 mb-2">
+//                 Art Number
+//                 {imageSrc === "/images/1/2.webp"
+//                   ? " One"
+//                   : imageSrc === "/images/2/2                  .webp"
+//                   ? " Two"
+//                   : " Three"}
+//               </h2>
+//               <div className="text-gray-600 text-sm leading-relaxed">
+//                 <p className="font-bold mb-1">ARTWORK DETAILS</p>
+//                 <ul className="list-none pl-0">
+//                   <li className="mb-1">• Availability: Ready-to-Ship</li>
+//                   <li className="mb-1">
+//                     • Shipping time: generally less than 3 days (by using our
+//                     branch nearest to you)
+//                   </li>
+//                   <li className="mb-1">
+//                     • Cost to ship: Free shipping worldwide
+//                   </li>
+//                   <li className="mb-1">• Framing: Multiple Options</li>
+//                   <li className="mb-1">
+//                     • Packing: The work is packaged by Adulis and follows a
+//                     standardized packaging process.
+//                   </li>
+//                   <li className="mb-1">
+//                     • Material: High-resolution Modern Print & High-quality
+//                     linen canvas.
+//                   </li>
+//                   <li className="mb-1">
+//                     • Signature: Sign by the artist on the back of the canvas by
+//                     default, and sign on the front at the lower right corner
+//                     when the customer requires.
+//                   </li>
+//                 </ul>
+//               </div>
+//             </div>
+//           </div>
+//           {/* End of Title and Description additions */}
+//           {/* Start of Button additions */}
+//           <div className="mt-4 flex justify-center">
+//             <div className="space-x-4 w-[384px] flex justify-center">
+//     <Link
+//       href={
+//         imageSrc === "/images/1/2.webp"
+//           ? "/products/1"
+//           : imageSrc === "/images/2/2.webp"
+//           ? "/products/2"
+//           : "/products/three"
+//       }
+//     >
+//       <button
+//         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline text-center"
+//       >
+//         Buy Now
+//       </button>
+//     </Link>
+//           </div>
+//           {/* End of Button additions */}
+//         </div>
+//       </motion.div>
+//     </section>
+//   );
+// };
+
+// export default BenefitSection;
+"use client";
+import Image from "next/image";
+import clsx from "clsx";
+import { motion, Variants } from "framer-motion";
+import BenefitBullet from "./BenefitBullet";
+import SectionTitle from "../SectionTitle";
+import { IBenefit } from "@/types";
+import Link from "next/link";
+
+interface Props {
+  benefit: IBenefit;
+  imageAtRight?: boolean;
+}
+
+const containerVariants: Variants = {
+  offscreen: {
+    opacity: 0,
+    y: 100,
+  },
+  onscreen: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      bounce: 0.2,
+      duration: 0.9,
+      delayChildren: 0.2,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+export const childVariants = {
+  offscreen: {
+    opacity: 0,
+    x: -50,
+  },
+  onscreen: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      bounce: 0.2,
+      duration: 1,
+    },
+  },
+};
+
+const BenefitSection: React.FC<Props> = ({ benefit, imageAtRight }: Props) => {
+  const { title, description, imageSrc, bullets } = benefit;
+
+  return (
+    <section className="benefit-section mt-20">
+      <motion.div
+        className="flex flex-wrap flex-col items-center justify-center gap-2 lg:flex-row lg:gap-20 lg:flex-nowrap mb-24"
+        variants={containerVariants}
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true }}
+      >
+        <div
+          className={clsx("flex flex-wrap items-center w-full max-w-lg", {
+            "justify-start": imageAtRight,
+            "lg:order-1 justify-end": !imageAtRight,
+          })}
+        >
+          <div className="w-full  text-center lg:text-left ">
+            <motion.div
+              className="flex flex-col w-full"
+              variants={childVariants}
+            >
+              <SectionTitle>
+                <h3 className="lg:max-w-2xl">{title}</h3>
+              </SectionTitle>
+
+              <p className="mt-1.5 mx-auto lg:ml-0 leading-normal text-foreground-accent">
+                {description}
+              </p>
+            </motion.div>
+
+            <div className="mx-auto lg:ml-0 w-full">
+              {bullets.map((item, index) => (
+                <BenefitBullet
+                  key={index}
+                  title={item.title}
+                  icon={item.icon}
+                  description={item.description}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className={clsx("mt-5 lg:mt-0", { "lg:order-2": imageAtRight })}>
+          <div className="flex justify-center">
+            <div
+              className={clsx("w-fit", {
+                "mr-0": imageAtRight,
+              })}
+            >
+              <Image
+                src={imageSrc}
+                alt="title"
+                width="384"
+                height="762"
+                quality={100}
+                className="lg:ml-0 max-w-full h-auto"
+              />
+            </div>
+          </div>
+          {/* Start of Title and Description additions */}
+          <div className="mt-4 flex justify-center">
+            <div className="max-w-[384px] w-full text-left px-4 sm:px-0">
+              <div className="text-gray-600 text-sm leading-relaxed">
+                <p className="font-bold mb-1">ARTWORK DETAILS</p>
+                <ul className="list-none pl-0">
+                  <li className="mb-1">• Availability: Ready-to-Ship</li>
+                  <li className="mb-1">
+                    • Shipping time: generally less than 3 days (by using our
+                    branch nearest to you)
+                  </li>
+                  <li className="mb-1">
+                    • Cost to ship: Free shipping worldwide
+                  </li>
+                  <li className="mb-1">• Framing: Multiple Options</li>
+                  <li className="mb-1">
+                    • Packing: The work is packaged by Adulis and follows a
+                    standardized packaging process.
+                  </li>
+                  <li className="mb-1">
+                    • Material: High-resolution Modern Print & High-quality
+                    linen canvas.
+                  </li>
+                  <li className="mb-1">
+                    • Signature: Sign by the artist on the back of the canvas by
+                    default, and sign on the front at the lower right corner
+                    when the customer requires.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          {/* End of Title and Description additions */}
+          {/* Start of Button additions */}
+          <div className="mt-4 flex justify-center">
+            <div className="space-x-4  max-w-[384px] w-full  flex justify-start px-4 sm:px-0">
+              <Link
+                href={
+                  imageSrc === "/images/1/2.webp"
+                    ? "/products/1"
+                    : imageSrc === "/images/3/44.webp"
+                    ? "/products/2"
+                    : "/products/3"
+                }
+              >
+                <button className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline text-center">
+                  Buy Now
+                </button>
+              </Link>
+            </div>
+            {/* End of Button additions */}
+          </div>
+        </div>{" "}
+      </motion.div>
+    </section>
+  );
+};
+
+export default BenefitSection;

@@ -1,0 +1,63 @@
+[
+  {
+    "id": "room1",
+    "image": "https://pannellum.org/images/alma.jpg",
+
+    "hotspots": [
+      {
+        "id": "hotspot2",
+        "pitch": 10,
+        "yaw": 100,
+        "target": "room1"
+      },
+      {
+        "id": "hotspot2",
+        "pitch": 10,
+        "yaw": 100,
+        "target": "room2"
+      },
+      {
+        "id": "hotspot2",
+        "pitch": -5,
+        "yaw": 200,
+        "target": "room2"
+      },
+      {
+        "id": "hotspot2",
+        "pitch": -5,
+        "yaw": 200,
+        "target": "room1"
+      }
+    ]
+  },
+  {
+    "id": "room2",
+    "image": "/images/360/2.jpg",
+    "hotspots": [
+      {
+        "id": "hotspot2",
+        "pitch": -5,
+        "yaw": 200,
+        "target": "room2"
+      },
+      {
+        "id": "hotspot2",
+        "pitch": -5,
+        "yaw": 200,
+        "target": "room1"
+      },
+      {
+        "id": "hotspot2",
+        "pitch": 10,
+        "yaw": 100,
+        "target": "room1"
+      },
+      {
+        "id": "hotspot2",
+        "pitch": 10,
+        "yaw": 100,
+        "target": "room2"
+      }
+    ]
+  }
+]
