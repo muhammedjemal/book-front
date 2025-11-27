@@ -749,7 +749,7 @@ const Header = () => {
         <div className="flex items-center space-x-4">
           <div className="relative">
             <Image
-              src={"/images/adulis.png"}
+              src={"https://logos-world.net/wp-content/uploads/2022/05/Acme-Logo.png"}
               alt="USA Flag"
               width={50}
               height={50}
