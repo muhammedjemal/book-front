@@ -14,11 +14,11 @@ export async function POST(req: Request) {
         product_data: {
           name:
             item.pathname === "/products/2"
-              ? "Ethiopia as the Mother of Africa"
+              ? " "
               : item.pathname === "/products/1"
-              ? "Sacred Procession"
+              ? " "
               : item.pathname === "/products/3"
-              ? "The Journey for Water"
+              ? " "
               : "Not Specified",
           metadata: {
             size: item.selectedSize,

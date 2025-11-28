@@ -177,7 +177,7 @@ const Navbar = () => {
                 isHeaderHovered ? "text-orange-600" : "text-white"
               } `}
             >
-              <span className={lobster.className}>ARTISMOORE</span>
+              <span className={lobster.className}> </span>
             </span>
           </Link>
           {/* Mobile Icon Container */}
@@ -227,7 +227,7 @@ const Navbar = () => {
                 isHeaderHovered ? "text-orange-500" : "text-white"
               }`}
             >
-              ADULIS
+              Acme
             </Link>
           </div>
 

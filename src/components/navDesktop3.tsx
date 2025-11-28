@@ -151,7 +151,6 @@ const Header = () => {
           </div>
         </div>
         <div className="flex-grow flex items-center justify-center ml-64">
-          {/* <Image src="/images/adulis.png" alt="Logo" width={40} height={40} /> */}
           <Link
             href="/"
             // ${lobster.className}
@@ -221,20 +220,7 @@ const Header = () => {
             </svg>
           </button>
           <AuthButton />
-          {/* <Link href="/cart" className=" focus:outline-none"> */}
-          {/* <svg
-              xmlns="http://www.w3.org/2000/svg" 
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              className="w-6 h-6 stroke-white group-hover:stroke-black"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.083a.75.75 0 00-.636-.751H6.553a.75.75 0 00-.636.751z"
-              />
-            </svg> */}
+       
           {/* @ts-ignore */}
           <DesktopCart />
           {/* </Link> */}
@@ -250,68 +236,68 @@ const Header = () => {
           <MenuItem setActive={setActive} active={active} item="ARTISTS">
             <div className="  text-sm grid grid-cols-2 gap-10 p-4">
               <ProductItem
-                title=" A Master of Ethiopian Spiritual Narratives"
+                title=""
                 href="/collections/1"
                 src="/images/artist1/artist1.webp"
-                description="Asnake Melesse, born in 1978 in Addis Ababa, Ethiopia."
+                description=""
               />
               <ProductItem
-                title="The Historian-Painter of Ethiopia"
+                title=""
                 href="/collections/2"
                 src="/images/artist2/artist2.webp"
-                description="Wendwesen Kebede Abera, born in 1983 in Dukem, Ethiopia."
+                description="."
               />
               <ProductItem
-                title="Painting Ethiopia’s Soul"
+                title=""
                 href="/collections/3"
                 src="/images/artist3/artist3.webp"
-                description="Robel Wolde, born on September 14, 1993, Addis Ababa, Ethiopia."
+                description="."
               />
             </div>
           </MenuItem>
 
-          <MenuItem setActive={setActive} active={active} item="ABOUT US">
+          <MenuItem setActive={setActive} active={active} item="">
             <div className="flex flex-col space-y-4 text-sm text-black">
-              <HoveredLink href="/about-us">About Us</HoveredLink>
+              <HoveredLink href="/about-us"></HoveredLink>
             </div>
           </MenuItem>
-          <MenuItem setActive={setActive} active={active} item="SUBSCRIPTIONS">
+          <MenuItem setActive={setActive} active={active} item="">
             <div className="flex flex-col space-y-4 text-sm">
               <HoveredLink href="/#pricing">
-                Subscribe to Adulis Pro
+                 
               </HoveredLink>
-              <HoveredLink href="/#features">Subscription features</HoveredLink>
+              <HoveredLink href="/#features"></HoveredLink>
             </div>
           </MenuItem>
 
-          <MenuItem setActive={setActive} active={active} item="PRODUCTS">
+          <MenuItem setActive={setActive} active={active} item="">
             <div className="  text-sm grid grid-cols-2 gap-10 p-4">
               <ProductItem
-                title="Sacred Procession"
+                title=""
                 href="/products/1"
                 src="/images/2.jpg"
-                description="By: Asnake Melesse, born in 1978 in Addis Ababa, Ethiopia."
+                description="."
               />
               <ProductItem
-                title="Ethiopia as the Mother of Africa"
+                title=""
                 href="/products/2"
                 src="/images/11.jpg"
-                description="By: Wendwesen Kebede Abera, born in 1983 in Dukem, Ethiopia."
+                description="."
               />
               <ProductItem
-                title="The Journey for Water"
+                title=""
                 href="/products/3"
                 src="/images/3.jpg"
-                description="By: Ethiopian Artist."
+                description="."
               />
             </div>
           </MenuItem>
 
           <MenuItem setActive={setActive} active={active} item="CONTACT">
             <div className="flex flex-col space-y-4 text-sm">
-              <HoveredLink href="/#footer">Contact Us</HoveredLink>
+              <HoveredLink href="/#footer"> </HoveredLink>
               <HoveredLink href="/#footer">
-                Subscibe to our mailing list and get discounts
+                
               </HoveredLink>
             </div>
           </MenuItem>

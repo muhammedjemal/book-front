@@ -17,17 +17,17 @@ const FAQ: React.FC = () => {
           <p className="hidden lg:block text-foreground-accent">FAQ&apos;S</p>
           <SectionTitle>
             <h2 className="my-3 !leading-snug lg:max-w-sm text-center lg:text-left">
-              Frequently Asked Questions
+              
             </h2>
           </SectionTitle>
           <p className="lg:mt-10 text-foreground-accent text-center lg:text-left">
-            Ask us anything!
+            
           </p>
           <a
             href="mailto:"
             className="mt-3 block text-xl lg:text-4xl text-secondary font-semibold hover:underline text-center lg:text-left"
           >
-            help@adulisethiopianart.com
+            
           </a>
         </div>
 

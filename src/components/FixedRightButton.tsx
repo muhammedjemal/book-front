@@ -1,44 +1,4 @@
-// // FixedRightButton.jsx
-// import React from "react";
-// import { ModalTrigger } from "@/components/ui/animated-modal";
 
-// const FixedRightButton = ({ onClick }) => {
-//   return (
-//     <div className="fixed top-1/2 transform -translate-y-1/2 right-4 z-20">
-//       <ModalTrigger
-//         className="relative flex justify-center group/modal-btn w-28 h-16 overflow-hidden"
-//         onClick={onClick}
-//       >
-//         <span className="bg-orange-500 text-white rounded-full py-2 px-4  inline-block text-sm font-medium transform rotate-90 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap">
-//           Get 25% off
-//         </span>
-//       </ModalTrigger>
-//     </div>
-//   );
-// };
-
-// export default FixedRightButton;
-// FixedRightButton.jsx
-// import React from "react";
-// import { ModalTrigger } from "@/components/ui/animated-modal";
-
-// const FixedRightButton = ({ onClick }) => {
-//   return (
-//     <div className="fixed top-1/2 transform -translate-y-1/2 right-4 z-20">
-//       <ModalTrigger
-//         className="relative flex justify-center group/modal-btn w-32 h-32 overflow-hidden"
-//         onClick={onClick}
-//       >
-//         <span className="bg-orange-500 text-white rounded-full py-2 px-4  inline-block text-sm font-medium transform rotate-90 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap">
-//           Get 25% off
-//         </span>
-//       </ModalTrigger>
-//     </div>
-//   );
-// };
-
-// export default FixedRightButton;
-// FixedRightButton.jsx
 import React, { useState, useEffect } from "react";
 import { ModalTrigger } from "@/components/ui/animated-modal";
 

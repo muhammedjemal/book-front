@@ -1,4 +1,3 @@
-// Import the Loader component from the specified path
 import Loader from "@/components/Loader";
 
 /**

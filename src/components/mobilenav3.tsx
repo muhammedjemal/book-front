@@ -210,7 +210,7 @@ const MobileNav = () => {
                 isSearchOpen ? "text-orange-500" : "text-white"
               } font-bohemaz `}
             >
-              Adulis
+              Acme
             </span>
           </Link>
           {/* Mobile Icon Container */}

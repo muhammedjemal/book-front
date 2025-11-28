@@ -27,20 +27,7 @@ const Footer: React.FC = () => {
   const handleSubscribe = async () => {
     // Simulate sending data to backend
     try {
-      // Replace this with your actual API endpoint
-      // const response = await fetch('/api/subscribe', {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //   },
-      //   body: JSON.stringify({ email }),
-      // });
-
-      // if (!response.ok) {
-      //   throw new Error('Failed to subscribe');
-      // }
-
-      // const data = await response.json();
+      
       console.log("Subscribed with email:", email); // Simulate success
       setSubscribed(true);
       setEmail("");
@@ -103,7 +90,7 @@ const Footer: React.FC = () => {
                 src={"/img/logo.png"}
                 width={50}
                 height={50}
-                alt="adulis logo"
+                alt="Acme logo"
                 className="min-w-fit w-5 h-5 md:w-7 md:h-7"
               />
               <h3 className={` text-xl  cursor-pointer ${lobster.className}`}>

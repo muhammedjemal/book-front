@@ -1,5 +1,5 @@
 export const heroDetails = {
-  heading: " w",
-  subheading: "Elevating Ethiopian Artistry on a Global Stage.",
+  heading: "",
+  subheading: ".",
   centerImageSrc: "/images/adulis.png",
 };

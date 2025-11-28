@@ -5,7 +5,7 @@ export async function POST(request) {
     const body = await request.json();
     const { email, password } = body;
 
-    // Basic Validation
+    
     if (!email || !password) {
       return NextResponse.json(
         { message: "Email and password are required." },
@@ -13,12 +13,9 @@ export async function POST(request) {
       );
     }
 
-    // --- TODO: REPLACE THIS WITH YOUR REAL DATABASE/API LOGIC ---
-    // Example: const user = await prisma.user.findUnique({ where: { email } });
-    
-    // MOCK RESPONSE
+//testtt
     if (email === "test@test.com" && password === "password") {
-      // Set auth cookies here usually
+      // Set auth cookies 
       return NextResponse.json({ message: "Success", user: { email } }, { status: 200 });
     }
 
