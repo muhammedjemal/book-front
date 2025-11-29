@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 
 
-const API_BASE = process.env.API_BASE;
+const API_BASE = "https://book-backend-production-be1f.up.railway.app/api";
 
 export default function AdminDashboard() {
   const { user, loading } = useAuth();
