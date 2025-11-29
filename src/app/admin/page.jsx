@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 
 // --- HARDCODED BASE URL TO PREVENT ERRORS ---
-const API_BASE = "http://127.0.0.1:8000/api";
+const API_BASE = process.env.API_BASE;
 
 export default function AdminDashboard() {
   const { user, loading } = useAuth();
