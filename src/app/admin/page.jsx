@@ -5,7 +5,7 @@ import { useAuth } from "@/context/AuthContext";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 
-// --- HARDCODED BASE URL TO PREVENT ERRORS ---
+
 const API_BASE = process.env.API_BASE;
 
 export default function AdminDashboard() {
@@ -18,7 +18,7 @@ export default function AdminDashboard() {
   
   // UI States
   const [activeTab, setActiveTab] = useState("bookings"); 
-  const [fetching, setFetching] = useState(true); // Default true so it starts loading
+  const [fetching, setFetching] = useState(true); 
   
   // Modal States
   const [isModalOpen, setIsModalOpen] = useState(false);
